@@ -115,6 +115,7 @@ var kurosakiHTML5AudioPlayer = function(settings) {
                             playAudio.innerHTML = 'Pause';
                             playAudio.className = playAudio.className.replace(' paused', '') + ' playing';
                             interval = setInterval(function(){
+                                console.log(audio.buffered.length);
                                 progressBar.style.width = 100/audio.duration*audio.currentTime + '%';
                                 if(audio.ended) {
                                     clearInterval(interval);
